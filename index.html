@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Pac-Man</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-overlay">
+            <div id="start-screen" class="screen">
+                <h1>3D PAC-MAN</h1>
+                <p>Use Arrow Keys or WASD to move</p>
+                <p>Collect all pellets and avoid ghosts!</p>
+                <button id="start-button">START GAME</button>
+            </div>
+            <div id="game-hud" class="hidden">
+                <div id="score">Score: 0</div>
+                <div id="lives">Lives: 3</div>
+                <div id="level">Level: 1</div>
+            </div>
+            <div id="game-over-screen" class="screen hidden">
+                <h1>GAME OVER</h1>
+                <p id="final-score">Final Score: 0</p>
+                <button id="restart-button">PLAY AGAIN</button>
+            </div>
+            <div id="win-screen" class="screen hidden">
+                <h1>YOU WIN!</h1>
+                <p id="win-score">Final Score: 0</p>
+                <button id="win-restart-button">PLAY AGAIN</button>
+            </div>
+        </div>
+        <div id="game-canvas"></div>
+    </div>
+    
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "./node_modules/three/build/three.module.js"
+        }
+    }
+    </script>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
